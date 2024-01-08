@@ -1,0 +1,53 @@
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+.bg_heart {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url("bannerimage/adi0.webp");
+  background-size: 100vh 100vh;
+  background-size: cover;
+  z-index: -1;
+  animation: untoldcoding 55s infinite ease-in-out;
+}
+
+@keyframes untoldcoding {
+  0% {
+    background-image: url("bannerimage/adi1.webp");
+  }
+  15% {
+    background-image: url("bannerimage/adi2.webp");
+  }
+  30% {
+    background-image: url("bannerimage/adi3.webp");
+  }
+  45% {
+    background-image: url("bannerimage/adi4.webp");
+  }
+  60%{
+    background-image: url(bannerimage/adi5.webp);
+  }
+  70%{
+    background-image: url("bannerimage/adi6.webp");
+  }
+  90%{
+    background-image: url("bannerimage/adi7.webp");
+  }
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: cursive;
+}
