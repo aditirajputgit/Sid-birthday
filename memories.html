@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="turbolinks-visit-control" content="reload">
     <title>Happy birthday giyaan</title>
     <link rel="stylesheet" href="memories.css" />
     <script src="memories.js"></script>
@@ -50,6 +51,9 @@
             <a href = "first-time/videoCall.webp">See</a>
           </div>
         </div>
+        <audio autoplay id="myaudio">
+          <source src="audio1.mp3" type="audio/mp3">
+        </audio>
         <div class="carousel-item">
           <img
             class="carousel-item__img"
@@ -163,5 +167,31 @@
         </div>
       </div>
     </section>
+    <script >
+      const audio = document.getElementById('myaudio');
+    const playbackKey = 'audioPlaybackState';
+    audio.volume = 0.2;
+    // Check if there's a playback state in sessionStorage
+    const playbackState = sessionStorage.getItem(playbackKey);
+
+    if (playbackState === 'playing') {
+      audio.play();
+    }
+
+    // Listen for page visibility change events
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        const storedState = sessionStorage.getItem(playbackKey);
+
+        if (storedState === 'playing') {
+          audio.play();
+        }
+      } else {
+        // Store the playback state when the page is not visible
+        sessionStorage.setItem(playbackKey, audio.paused ? 'paused' : 'playing');
+      }
+    });
+    </script>
   </body>
+ 
 </html>

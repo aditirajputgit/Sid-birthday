@@ -8,11 +8,10 @@ html{
 
 .banner{
     position: relative;
-    top: 0;
-    left: 0;
+  
     width: 100%;
     height: 100vh;
-    background-image: url(/bannerimage/IMG_20240107_113022_349.webp);
+    background-image: url("/Sid-birthday/bannerimage/IMG_20240107_113022_349.webp");
     background-size: cover;
     z-index: 1000;
     animation: untoldcoding 55s infinite ease-in-out;
@@ -24,27 +23,30 @@ html{
 
   @media (min-width:450px) {
     .banner{
-        background-image: url(bannerimage/InShot_20240107_135249882.webp);
+        background-image: url("bannerimage/InShot_20240107_135249882.webp");
     }
   }
 @keyframes untoldcoding {
+  0%{
+    background-image: url("/Sid-birthday/bannerimage/IMG_20240107_113022_349.webp") , url("/Sid-birthday/bannerimage/beach.webp");
+  }
   12% {
-    background-image: url(bannerimage/beach.webp);
+    background-image: url("/Sid-birthday/bannerimage/beach.webp") ,url("/Sid-birthday/bannerimage/ddi.webp");
   }
   25% {
-    background-image: url("bannerimage/ddi.webp");
+    background-image: url("/Sid-birthday/bannerimage/ddi.webp") , url("/Sid-birthday/bannerimage/hisbestfriends.webp");
   }
   50% {
-    background-image: url("bannerimage/hisbestfriends.webp");
+    background-image: url("/Sid-birthday/bannerimage/hisbestfriends.webp") ,url("/Sid-birthday/bannerimage/IMG_20240107_113022_349.webp");
   }
   60%{
-    background-image: url("bannerimage/IMG_20240107_113022_349.webp");
+    background-image: url("/Sid-birthday/bannerimage/IMG_20240107_113022_349.webp"),url("/Sid-birthday/bannerimage/image1.webp");
   }
   80% {
-    background-image: url("bannerimage/image1.webp");
+    background-image: url("/Sid-birthday/bannerimage/image1.webp"),url("/Sid-birthday//bannerimage/sid.webp");
   }
   90%{
-    background-image: url(bannerimage/sid.webp);
+    background-image: url("/Sid-birthday//bannerimage/sid.webp");
   }
 }
 a{
